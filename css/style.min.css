@@ -1,0 +1,30 @@
+/* Для меню с разрешением не более 768px */
+
+@media screen and (max-width: 768px) {
+    .small {
+      visibility: hidden;
+      display: none;
+    }
+  }
+/* Для меню с разрешением более 768px */
+  @media screen and (min-width: 768px) {
+    .large {
+      visibility: hidden;
+      display: none;
+    }
+  }
+/* Для блоков сортировки */
+  @media only screen and (max-width: 768px) {
+    .columns {
+        width: 100%;
+    }
+}
+/* Для доп. меню */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

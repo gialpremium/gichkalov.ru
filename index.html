@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Сайт о кредитах</title>
+    <meta name="description" content="Сравнить потребительские кредиты онлайн"> 
+    <meta name="keywords" content=""> <!-- === На сегодня не актуально === -->
+    <meta name="author" content="Gichkalov Aleksandr">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- === Оптимизация для всех экранов === -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> <!-- === Подключение гугловых шрифтов === -->
+    <link rel="stylesheet" href="css/style.css"> <!-- === Подключение стилей === -->
+    <link rel="stylesheet" href="css/style.min.css"> <!-- === Подключение стилей === -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<!-- START- Всплывающий message вверху страницы -->
+    <div class="message"> 
+       <span class="closemsg">&times;</span>  
+       <strong>Внимание!</strong> Сайт находится в разработке.
+    </div>
+<!-- END -->
+<!-- === START Шапка сайта === -->
+    <div class="main">
+      <h1>САЙТ О КРЕДИТАХ</h1>
+      <a href="http://gichkalov.ru/"><img src="img/logo.png" alt="Лого сайта о кредитах" height="86" width="250"></a>
+    </div>
+<!-- === END === -->
+<!-- === Дополнительное меню === -->    
+  <div id="myNav" class="overlay"> <!-- === Обращение к скрипту для доп. меню === -->
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- === Кнопка закрыть меню === -->
+       <div class="overlay-content">
+         <div class="large">
+            <a href="#">Кредиты</a>
+            <a href="#">Ипотека</a>
+            <a href="#">Вклады</a>
+        </div>
+         <a href="#">О нас</a>
+         <a href="#">Контакты</a>
+         <a href="#">FAQ</a>
+       </div>
+   </div>
+<!-- === END === -->
+<!-- === Таблинки меню === -->
+<div class="small"> 
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen"><i style="font-size:18px" class="fa">&#xf015;</i></button> <!-- === Кнопка для "Главная", ПО УМОЛЧАНИЮ === -->
+<button class="tablink" onclick="openPage('Credits', this, 'green')">Кредиты</button> <!-- === Кнопка для "Кредиты" === -->
+<button class="tablink" onclick="openPage('Ipoteka', this, 'blue')">Ипотека</button> <!-- === Кнопка для "Ипотека" === -->
+<button class="tablink" onclick="openPage('Vklady', this, 'orange')">Вклады</button> <!-- === Кнопка для "Вклады" === -->
+<button class="tablink" onclick="openNav('')"><i style="font-size:18px" class="fa">&#xf0c9;</i></button> <!-- === Кнопка для "Доп.меню" === -->
+</div>
+<!-- === END === -->
+
+<!-- === Таблинки меню для мобильных устройств === -->
+<div class="large">
+   <button class="tablink-min" onclick="openPage('Home', this, 'red')" id="st"><i style="font-size:18px" class="fa">&#xf015;</i></button> <!-- === Кнопка для "Главная", ПО УМОЛЧАНИЮ === -->
+   <button class="tablink-min" onclick="openNav('')"><i style="font-size:18px" class="fa">&#xf0c9;</i></button> <!-- === Кнопка для "Доп.меню" === -->
+   </div>   
+<!-- === END === -->
+<!-- === Инфо на страничке "Главная" === -->
+<div id="Home" class="tabcontent">
+   <div class="homeline"> <!-- === Синяя полоса на главной === -->
+     <p><strong>Выгодные кредиты с онлайн-заявкой!</strong><br>Потребительские кредиты на любые цели! Сумма до 3 000 000 руб. Ставка от 11,99%. Без комиссий и поручителей.</p>
+   </div>
+<h2 style="text-align:center; color:black;">КРЕДИТЫ НА ВСЕ СЛУЧАИ ЖИЗНИ</h2>
+
+   <div id="myBtnContainer"> <!-- Сортировка -->
+      <button class="btn active" onclick="filterSelection('all')">Все</button>
+      <button class="btn" onclick="filterSelection('do3')"> от 1 до 3 млн</button>
+      <button class="btn" onclick="filterSelection('do5')"> от 3 до 5 млн</button>
+      <button class="btn" onclick="filterSelection('do10')"> от 5 до 10 млн</button>
+
+   </div> <!-- END - Сортировка -->
+<div class="container">
+      <div class="filterDiv do3">    
+       <div class="columns">
+         <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">ВТБ 24</li>
+           <li class="grey">ставка от 12,90%</li>
+           <li>до 1 000 000 руб.</li>
+           <li>до 60 мес.</li>
+           <li>без подтверждения</li>
+           <li>наличными</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+         </ul>
+       </div>
+     </div>
+
+    <div class="filterDiv do5">
+      <div class="columns">
+         <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">Сбербанк России</li>
+           <li class="grey">ставка от 11,99%</li>
+           <li>до 3 500 000 руб.</li>
+           <li>до 60 мес.</li>
+           <li>подтверждение дохода</li>
+           <li>на карту</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+         </ul>
+    </div>
+   </div>
+
+   <div class="filterDiv do3">
+     <div class="columns">
+        <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">Хоум Кредит Банк</li>
+           <li class="grey">ставка от 12,00%</li>
+           <li>до 1 000 000 руб.</li>
+           <li>до 60 мес.</li>
+           <li>без подтверждения</li>
+           <li>наличными</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+       </ul>
+     </div>
+   </div>
+
+   <div class="filterDiv do3">
+     <div class="columns">
+        <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">Альфа-Банк</li>
+           <li class="grey">ставка от 12,55%</li>
+           <li>до 1 500 000 руб.</li>
+           <li>до 60 мес.</li>
+           <li>без подтверждения</li>
+           <li>наличными</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+       </ul>
+     </div>
+   </div>
+
+   <div class="filterDiv do3">
+     <div class="columns">
+        <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">Почта Банк</li>
+           <li class="grey">ставка от 11,5%</li>
+           <li>до 1 999 000 руб.e</li>
+           <li>до 90 мес.</li>
+           <li>подтверждение дохода</li>
+           <li>на карту</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+        </ul>
+     </div>
+    </div>
+    <div class="filterDiv do5">
+     <div class="columns">
+        <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">Промсвязь банк</li>
+           <li class="grey">ставка от 11,5%</li>
+           <li>до 4 999 000 руб.e</li>
+           <li>до 240 мес.</li>
+           <li>подтверждение дохода</li>
+           <li>на карту</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+        </ul>
+     </div>
+    </div>
+         <div class="filterDiv do10">
+     <div class="columns">
+        <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">Промсвязь банк 2</li>
+           <li class="grey">ставка от 11,5%</li>
+           <li>до 9 999 000 руб.e</li>
+           <li>до 240 мес.</li>
+           <li>подтверждение дохода</li>
+           <li>на карту</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+        </ul>
+     </div>
+    </div>
+     <div class="filterDiv do10">
+     <div class="columns">
+        <ul class="banki">
+           <li class="header" style="background-color:#4CAF50">Промсвязь банк 3</li>
+           <li class="grey">ставка от 11,5%</li>
+           <li>до 6 999 000 руб.e</li>
+           <li>до 240 мес.</li>
+           <li>подтверждение дохода</li>
+           <li>на карту</li>
+           <li class="grey"><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></li>
+        </ul>
+     </div>
+   </div>
+</div>
+</div><!-- END страницы "Главная" -->
+<!-- === Инфо на страничке "Кредиты" === -->
+<div id="Credits" class="tabcontent">
+  <div class="creditline"> <!-- === Зеленая полоса - страница "Кредиты" === -->
+     <p><strong>Кредиты</strong><br> Сравнить потребительские кредиты </p>
+  </div>
+</div>
+<!-- END страницы "Кредиты" -->
+<!-- === Инфо на страничке "Ипотека" === -->
+<div id="Ipoteka" class="tabcontent">
+  <div class="ipotekaline"> <!-- === Синяя полоса - страница "Ипотека" === -->
+     <p><strong>Ипотека</strong><br> Сравнить ипотечные кредиты</p>
+  </div>
+</div>
+<!-- END страницы "Ипотека" -->
+<!-- === Инфо на страничке "Вклады" === -->
+<div id="Vklady" class="tabcontent">
+  <div class="vkladyline"> <!-- === Оранжевая полоса - страница "Вклады" === -->
+     <p><strong>Вклады</strong><br> Сравнить вклады</p>
+  </div>
+</div>
+<!-- END страницы "Вклады" -->
+<!-- Подключение скриптов -->
+    <script type="text/javascript" src="js\message.js"></script> <!-- Скрипт message на главной сверху --> 
+    <script type="text/javascript" src="js\top.js"></script> <!-- Доп.меню -->
+    <script type="text/javascript" src="js\menu.js"></script> <!-- Подгрузка меню -->
+    <script type="text/javascript" src="js\sort.js"></script> <!-- Сортировка кредитов  -->
+ <!-- END -->
+</body>
+</html> 

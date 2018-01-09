@@ -1,0 +1,249 @@
+* {  box-sizing: border-box /* При помощи box-sizing: border-box мы можем сказать браузеру, что ширина, которую мы ставим, относится к элементам полностью, включая border и padding: */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Стили таблинков меню */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+}
+
+.tablink-min {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Стили областей контента таблинков */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+/* Бекграунды для каждого раздела по отдельности */
+#Home {background-color: #fff;}
+#Credits {background-color: #f1f1f1;}
+#Ipoteka {background-color: #f1f1f1;}
+#Vklady {background-color: #f1f1f1;}
+
+/* Стили доп. меню*/
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.main {
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Всплывающий message вверху страницы */
+.message {
+    padding: 20px 20px 20px 30px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.closemsg {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closemsg:hover {
+    color: black;
+}
+
+/* Сообщения на каждой странице */
+
+
+.homeline {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #cfe9ff;
+    border-left: 6px solid #039be5;
+    color: #369;
+}
+
+.creditline {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #ddffdd;
+    border-left: 6px solid #4CAF50;
+    color: black;
+}
+
+.ipotekaline {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    color: black;
+}
+
+
+.vkladyline {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+    color: black;
+}
+
+/* Банки blocks*/
+.columns {
+    float: left;
+    width: 12.5%;
+    padding: 8px;
+}
+
+.banki {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.banki:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.banki .header {
+    background-color: #111;
+    color: white;
+    font-size: 15px;
+}
+
+.banki li {
+    border-bottom: 1px solid #eee;
+    padding: 12px;
+    text-align: center;
+    color: #ff9800;
+    font-size: 13px;
+}
+
+.banki .grey {
+    background-color: #eee;
+    font-size: 14px;
+    color: black;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 7px 14px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.button:hover {
+    background-color: red;
+    box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.2);
+}
+
+
+/* Сортировка */
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover, .active {
+  background-color: #ccc;
+}
+
